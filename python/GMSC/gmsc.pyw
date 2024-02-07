@@ -19,12 +19,6 @@ def open_link(link, code, weekday):
     ctypes.windll.user32.MessageBoxW(0, f'{weekday} - {code}!!!', 'GM-CSOP' , 0x1000) # refer to docs
     webbrowser.open_new_tab(link)
 
-"""BSCS-3A
-    SUBJECTS: 3
-    CLASSES: 13 incl. LABS
-    LABS: 2 T, F
-"""
-
 meetings = MeetingIO('sched.csv')
 
 while True:
