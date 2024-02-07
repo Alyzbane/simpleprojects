@@ -3,7 +3,8 @@ import csv
 """
     Read csv file and return the following output format: 
             {'Day': [start time, link, subject code], ...}
-
+    
+    If csv file is from excel file:
     Issue sa cells ng link combined sa isa
     Walang Sakit: 
             Input:  Cell[1] Subject  [1] Link
