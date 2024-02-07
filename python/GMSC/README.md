@@ -1,29 +1,17 @@
-<h1>
-Prerequisite
-</h1>
-
-<code>
-pip install -r requirements.txt
-</code>
-<br>
-
+<h1>Prerequisite</h1>
+<code>pip install -r requirements.txt</code>
 <h2> How to run </h2>
 <ul>
 <li>Double Click gmcs.pyw</li>
 <li>Press ok</li>
 </ul> 
-<br>
-
 <h3> What's happening? </h3>
 <code>
 If time == meeting_time:
     a popup will open
     just press ok and the link will be automatically opened in browser 
 </code>
-
 <strong>The program is now running in the background and set to check the time every 1 minute</strong>
-<br>
-
 <h2>Problems</h2>
 
 <strong> Didn't run? </strong>
