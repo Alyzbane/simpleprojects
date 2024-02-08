@@ -24,7 +24,6 @@ def MeetingIO(fr=None):
     if fr is None:
         fr = 'sched.csv'
         
-    print(fr)
     with open(fr) as f:
         cr = csv.DictReader(f, delimiter=',')
 
