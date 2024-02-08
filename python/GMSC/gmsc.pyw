@@ -13,11 +13,12 @@ MB_SYSTEMMODAL = 0x1000
 MB_ICONEXCLAMATION = MB_ICONWARNING = 0x30
 MB_ICONSTOP = MB_ICONERROR = MB_ICONHAND = 0x10
 
+notif = Playback('./alert.mp3')
+notif.set_volume(1)
 
 """ GM-SC : Good Morning - Sexy Computer """
 # Define a function to open a link
 def open_link(link, code, weekday):
-    notif.set_volume(1)
     notif.play();
     ctypes.windll.user32.MessageBoxW(0, f'{weekday} - {code}!!!', 'GM-CSOP' , MB_ICONEXCLAMATION) # refer to docs
     webbrowser.open_new_tab(link)
@@ -31,8 +32,6 @@ def csv_finder():
     sys.exit()
 
 def start():
-    notif = Playback('./alert.mp3')
-    notif.set_volume(1)
     notif.play()
     ctypes.windll.user32.MessageBoxW(0, "GM-SC is running in the background...", 'CS-3A', MB_SYSTEMMODAL) # refer to docs
 
@@ -50,7 +49,7 @@ while True:
         meeting_list = meetings.get(weekday, [])
         
         matching_meetings = [meeting for meeting in meeting_list if meeting[0] == ntime]
-        
+
         for meeting_time, link, code in matching_meetings:
             print(f"Time: {meeting_time}, Link: {link}, Code: {code}")
             open_link(link, code, weekday)

@@ -24,6 +24,7 @@ def MeetingIO(fr=None):
     if fr is None:
         fr = 'sched.csv'
         
+    print(fr)
     with open(fr) as f:
         cr = csv.DictReader(f, delimiter=',')
 
@@ -34,7 +35,6 @@ def MeetingIO(fr=None):
             'H': 'Thursday',
             'F': 'Friday',
             'S': 'Saturday',
-            'U': 'Sunday'
         }
         
         for row in cr:
@@ -57,5 +57,4 @@ def MeetingIO(fr=None):
 
             for sb, d, t, l in zip(sb, dl, tl, ll):
                 meetings[d.strip()].append((t.strip(), l.strip(), sb.strip()))
-    
     return meetings
