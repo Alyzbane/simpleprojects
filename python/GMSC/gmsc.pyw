@@ -78,6 +78,7 @@ def MeetingIO(fr=None):
                 hr += 12
 
             st = f'{hr:02d}:{mn:02d}'
+#            print(st)
             
             sb = sub.split(',')
             dl = days.split(',')
